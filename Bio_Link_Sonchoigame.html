@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>use share 3105 - Bio Link</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#050b14',
+                        cardBg: 'rgba(13, 27, 42, 0.75)',
+                        cardBorder: 'rgba(45, 212, 191, 0.25)',
+                        glowCyan: '#2dd4bf',
+                        btnCyan: '#2dd4bf',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050b14;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(13, 148, 136, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(6, 95, 70, 0.15) 0%, transparent 40%);
+            color: #f3f4f6;
+            min-height: 100vh;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration) ease-in-out infinite;
+            opacity: var(--opacity);
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .glow-avatar {
+            box-shadow: 0 0 25px rgba(45, 212, 191, 0.6), inset 0 0 15px rgba(45, 212, 191, 0.4);
+        }
+
+        .glow-main-btn {
+            box-shadow: 0 0 20px rgba(45, 212, 191, 0.4);
+            transition: all 0.3s ease;
+        }
+        .glow-main-btn:hover {
+            box-shadow: 0 0 30px rgba(45, 212, 191, 0.7);
+            transform: translateY(-2px);
+        }
+
+        .glow-tiktok {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+        }
+
+        .glass-panel {
+            background: rgba(13, 27, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(45, 212, 191, 0.25);
+        }
+
+        .tab-btn {
+            transition: all 0.2s ease;
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.3), rgba(13, 148, 136, 0.2));
+            border-color: rgba(45, 212, 191, 0.6);
+            box-shadow: 0 0 15px rgba(45, 212, 191, 0.3);
+        }
+
+        .patch-card {
+            background: rgba(10, 22, 35, 0.85);
+            border: 1px solid rgba(45, 212, 191, 0.25);
+            transition: all 0.2s ease;
+        }
+        .patch-card:hover {
+            border-color: rgba(45, 212, 191, 0.5);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center py-4 px-2 sm:py-8">
+
+    <div id="stars-container" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
+
+    <div class="relative z-10 w-full max-w-[440px] mx-auto rounded-[36px] p-4 sm:p-6 shadow-2xl glass-panel border border-teal-500/30">
+        
+        <!-- Top status bar -->
+        <div class="flex justify-between items-center mb-6">
+            <div id="clock" class="flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-teal-950/60 border border-teal-500/30 text-teal-200">
+                <i class="fa-solid fa-moon text-teal-400"></i>
+                <span>21:16:18</span>
+            </div>
+            <button onclick="triggerAction('Mở bản đồ / Tiện ích')" class="w-9 h-9 rounded-full bg-teal-950/60 border border-teal-500/30 flex items-center justify-center text-teal-300 hover:bg-teal-900/50 transition">
+                <i class="fa-solid fa-compass text-sm"></i>
+            </button>
+        </div>
+
+        <!-- Avatar & Profile Header -->
+        <div class="flex flex-col items-center text-center mb-6">
+            <div class="relative w-28 h-28 mb-3">
+                <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-teal-500 to-cyan-600 blur-md opacity-75"></div>
+                <img src="image_2.png" 
+                     onerror="this.src='https://placehold.co/300x300/0f172a/2dd4bf?text=MC+MOD'"
+                     alt="Avatar" 
+                     class="relative w-full h-full object-cover rounded-full border-2 border-teal-400 glow-avatar">
+            </div>
+
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-950/80 border border-teal-500/40 text-xs font-medium text-teal-200 mb-2">
+                <span>MC MOD</span>
+                <i class="fa-solid fa-circle-check text-teal-400 text-[11px]"></i>
+            </div>
+
+            <h1 class="text-3xl font-extrabold tracking-wider bg-gradient-to-r from-white via-teal-200 to-cyan-400 bg-clip-text text-transparent">
+                use share 3105
+            </h1>
+        </div>
+
+        <!-- Main Link Button -->
+        <div class="flex flex-col gap-3 mb-6">
+            <button onclick="scrollToVip()" class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-teal-200 via-white to-cyan-100 text-slate-950 font-bold text-base flex items-center justify-center gap-2 glow-main-btn active:scale-95 transition-all">
+                <i class="fa-solid fa-link text-teal-900 text-lg"></i>
+                <span>LINK 3105</span>
+                <i class="fa-solid fa-arrow-down text-teal-900 text-sm animate-bounce"></i>
+            </button>
+        </div>
+
+        <!-- Notice Bar -->
+        <div class="p-3.5 mb-6 rounded-2xl bg-teal-950/50 border border-teal-500/30 backdrop-blur-md text-center">
+            <p class="text-xs font-bold uppercase tracking-wider text-teal-200 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-shield-halved text-teal-400"></i>
+                <span>MUA MẸO LOG ANTI 100% LIÊN HỆ TIKTOK</span>
+            </p>
+        </div>
+
+        <!-- Registration Banner -->
+        <div class="flex items-center justify-center gap-2 mb-4 py-1.5 px-4 rounded-xl bg-teal-950/30 border border-teal-500/20 text-xs font-semibold text-teal-300 tracking-wider">
+            <i class="fa-solid fa-rss text-teal-400 text-[10px]"></i>
+            <span>ĐĂNG KÝ KÊNH TẠI ĐÂY</span>
+        </div>
+
+        <!-- Social Media: TikTok -->
+        <div class="mb-4">
+            <a href="https://www.tiktok.com/@user4741741868?_r=1&_t=ZS-9A0C3cEYiVI" target="_blank" rel="noopener noreferrer" onclick="triggerAction('TikTok Profile')" class="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white font-bold text-sm glow-tiktok active:scale-95 transition">
+                <i class="fa-brands fa-tiktok text-lg"></i>
+                <span>TikTok</span>
+            </a>
+        </div>
+
+        <!-- VIP Section Anchor -->
+        <div id="vip-anchor" class="grid grid-cols-1 gap-2 mt-6 pt-4 border-t border-teal-500/20">
+            <button id="vip-tab-btn" onclick="toggleVipSection()" class="tab-btn active flex items-center justify-between py-3 px-4 rounded-xl bg-teal-950/40 border border-teal-500/30 text-teal-200 text-sm font-semibold shadow-md">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-crown text-amber-400 text-base"></i>
+                    <span>3105 VIP</span>
+                </div>
+                <i id="vip-chevron" class="fa-solid fa-chevron-down text-xs transition-transform duration-300 transform rotate-180"></i>
+            </button>
+        </div>
+
+        <!-- VIP Content List -->
+        <div id="vip-content" class="mt-4 flex flex-col gap-3 transition-all duration-300">
+            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-teal-300 px-1 pt-1">
+                <i class="fa-solid fa-layer-group text-teal-400"></i>
+                <span>FILE PATCH TRÊN 3105</span>
+            </div>
+
+            <!-- Patch Item: MẸO VIP 3105 with MediaFire link -->
+            <div class="patch-card p-3 rounded-2xl flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <img src="image_4.png" alt="Game icon" class="w-12 h-12 rounded-xl object-cover border border-teal-500/30 flex-shrink-0">
+                    <div class="flex flex-col">
+                        <span class="text-xs font-bold text-white uppercase">MẸO VIP 3105</span>
+                        <span class="text-[10px] text-teal-300">• DÙNG CHO APP 3105</span>
+                        <span class="text-[10px] text-teal-300">• GAME GỐC NO IPA</span>
+                        <div class="flex items-center gap-1.5 mt-1.5 flex-wrap">
+                            <span class="text-[9px] bg-teal-950/80 border border-teal-500/30 text-teal-200 px-2 py-0.5 rounded-md">
+                                <i class="fa-solid fa-video text-[8px] mr-0.5"></i> Nhớ Xem Video PATCH Bằng 3105
+                            </span>
+                            <span class="text-[9px] bg-slate-900 border border-slate-700 text-slate-300 px-1.5 py-0.5 rounded flex items-center gap-1">
+                                <i class="fa-brands fa-apple text-[9px]"></i> iOS
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.mediafire.com/file/8se7b54e38hqcz4/Only_Esp_FFTH.3105/file" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); triggerAction('Đang chuyển hướng MediaFire...');" class="w-10 h-10 rounded-xl bg-teal-600 hover:bg-teal-500 text-white flex items-center justify-center shadow-lg shadow-teal-500/30 transition flex-shrink-0 active:scale-95 cursor-pointer">
+                    <i class="fa-solid fa-cloud-arrow-down text-sm"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const clockEl = document.getElementById('clock');
+            if (clockEl) {
+                clockEl.innerHTML = `<i class="fa-solid fa-moon text-teal-400"></i><span>${hours}:${minutes}:${seconds}</span>`;
+            }
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        const starsContainer = document.getElementById('stars-container');
+        const starCount = 35;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            const size = Math.random() * 2.5 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.setProperty('--duration', `${Math.random() * 3 + 2}s`);
+            star.style.setProperty('--opacity', Math.random() * 0.7 + 0.3);
+            starsContainer.appendChild(star);
+        }
+
+        function scrollToVip() {
+            const content = document.getElementById('vip-content');
+            const chevron = document.getElementById('vip-chevron');
+            content.style.display = 'flex';
+            chevron.style.transform = 'rotate(180deg)';
+            
+            document.getElementById('vip-anchor').scrollIntoView({ behavior: 'smooth' });
+            triggerAction('Chuyển đến 3105 VIP');
+        }
+
+        function toggleVipSection() {
+            const content = document.getElementById('vip-content');
+            const chevron = document.getElementById('vip-chevron');
+            if (content.style.display === 'none') {
+                content.style.display = 'flex';
+                chevron.style.transform = 'rotate(180deg)';
+                triggerAction('Đã mở: 3105 VIP');
+            } else {
+                content.style.display = 'none';
+                chevron.style.transform = 'rotate(0deg)';
+                triggerAction('Đã đóng: 3105 VIP');
+            }
+        }
+
+        function triggerAction(name) {
+            const existingToast = document.getElementById('custom-toast');
+            if (existingToast) existingToast.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'custom-toast';
+            toast.className = 'fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-teal-950/90 border border-teal-400 text-white px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-3 backdrop-blur-md animate-bounce';
+            toast.innerHTML = `
+                <i class="fa-solid fa-circle-check text-teal-300 text-lg"></i>
+                <div class="text-xs font-semibold"><span class="text-teal-200">${name}</span></div>
+            `;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.5s ease';
+                setTimeout(() => toast.remove(), 500);
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
