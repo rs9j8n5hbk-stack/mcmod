@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC MOD Mobile Landing Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        neon: {
+                            pink: '#ffe600',
+                            purple: '#1a180d',
+                            dark: '#0a0904',
+                            card: '#181508',
+                            border: '#ffe60066'
+                        },
+                        yellow: {
+                            neon: '#ffe600',
+                            glow: 'rgba(255, 230, 0, 0.5)'
+                        },
+                        green: {
+                            neon: '#00ff66',
+                            glow: 'rgba(0, 255, 102, 0.5)'
+                        },
+                        red: {
+                            neon: '#ff3333',
+                            glow: 'rgba(255, 51, 51, 0.5)'
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(255, 230, 0, 0.4)',
+                        'neon-lg': '0 0 35px rgba(255, 230, 0, 0.6)',
+                        'yellow-neon': '0 0 20px rgba(255, 230, 0, 0.5)',
+                        'yellow-neon-lg': '0 0 35px rgba(255, 230, 0, 0.7)',
+                        'green-neon': '0 0 20px rgba(0, 255, 102, 0.5)',
+                        'green-neon-lg': '0 0 35px rgba(0, 255, 102, 0.7)',
+                        'red-neon': '0 0 20px rgba(255, 51, 51, 0.5)',
+                        'red-neon-lg': '0 0 35px rgba(255, 51, 51, 0.7)'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0904;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 230, 0, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 200, 0, 0.08) 0%, transparent 40%);
+            color: #f3f4f6;
+            min-height: 100vh;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0904;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffe600;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+
+    <!-- Header / Banner -->
+    <header class="w-full pt-8 pb-6 px-4 text-center relative z-10">
+        <div class="max-w-md mx-auto">
+            <!-- Avatar with Neon Glow -->
+            <div class="relative w-28 h-28 mx-auto mb-4 group">
+                <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500 opacity-75 blur-md animate-pulse"></div>
+                <img src="https://placehold.co/150x150/181508/ffe600?text=MC" alt="Avatar" class="relative w-28 h-28 rounded-full object-cover border-2 border-yellow-400 shadow-yellow-neon">
+            </div>
+            
+            <h1 class="text-2xl sm:text-3xl font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-400 drop-shadow-[0_0_10px_rgba(255,230,0,0.5)]">
+                MC MOD MOBILE
+            </h1>
+            <p class="text-xs sm:text-sm text-yellow-200/80 mt-1 font-medium">
+                Kênh chia sẻ file Mod & Thủ thuật game đỉnh cao 👑
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 w-full max-w-md mx-auto px-4 pb-12 space-y-4 relative z-10">
+
+        <!-- Zalo Contact Button -->
+        <a href="https://zalo.me/0528198420" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-gradient-to-r from-[#181508] to-[#26220d] border border-yellow-400/40 shadow-yellow-neon hover:shadow-yellow-neon-lg hover:border-yellow-400 transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-yellow-400/20 border border-yellow-400/40 flex items-center justify-center text-yellow-300 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-comment-dots text-lg"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">zl 0528198420</h2>
+                    <p class="text-[11px] text-yellow-200/70">Liên hệ Zalo hỗ trợ trực tiếp</p>
+                </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-yellow-400/10 flex items-center justify-center text-yellow-300 group-hover:translate-x-1 transition-transform">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </div>
+        </a>
+
+        <!-- TikTok Channel Button -->
+        <a href="https://www.tiktok.com/@user4741741868?_r=1&_t=ZS-9A1D5HLjJPo" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-gradient-to-r from-[#181508] to-[#26220d] border border-yellow-400/40 shadow-yellow-neon hover:shadow-yellow-neon-lg hover:border-yellow-400 transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-yellow-400/20 border border-yellow-400/40 flex items-center justify-center text-yellow-300 group-hover:scale-110 transition-transform">
+                    <i class="fa-brands fa-tiktok text-lg"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">TikTok Chính Thức</h2>
+                    <p class="text-[11px] text-yellow-200/70">Xem video hướng dẫn & update mới nhất</p>
+                </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-yellow-400/10 flex items-center justify-center text-yellow-300 group-hover:translate-x-1 transition-transform">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </div>
+        </a>
+
+        <!-- Mẹo Antiban 100% Button -->
+        <a href="https://www.tiktok.com/@user4741741868?_r=1&_t=ZS-9A2qxNFvWtw" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-gradient-to-r from-[#181508] to-[#26220d] border border-yellow-400/40 shadow-yellow-neon hover:shadow-yellow-neon-lg hover:border-yellow-400 transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-yellow-400/20 border border-yellow-400/40 flex items-center justify-center text-yellow-300 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-shield-halved text-lg"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">MẸO ANTIBAN 100%</h2>
+                    <p class="text-[11px] text-yellow-200/70">Bảo vệ tài khoản an toàn tuyệt đối</p>
+                </div>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-yellow-400/10 flex items-center justify-center text-yellow-300 group-hover:translate-x-1 transition-transform">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+            </div>
+        </a>
+
+        <!-- Divider -->
+        <div class="flex items-center my-6">
+            <div class="flex-1 border-t border-yellow-400/30"></div>
+            <span class="px-3 text-xs font-bold uppercase tracking-wider text-yellow-400">DANH SÁCH FILE & MẸO VIP</span>
+            <div class="flex-1 border-t border-yellow-400/30"></div>
+        </div>
+
+        <!-- 1. AIM DRAG (Yellow Neon) -->
+        <a href="https://link4m.org/xJG5q2q" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-yellow-400/30 hover:border-yellow-400 shadow-yellow-neon hover:shadow-yellow-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-bullseye text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">1. AIM DRAG</h2>
+                    <p class="text-[11px] text-yellow-200/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-yellow-400 rounded-full shadow-sm group-hover:bg-yellow-300 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 2. headlock kezis🔥ipa (GREEN NEON) -->
+        <a href="https://link4m.net/6qEXCDS" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-green-neon/30 hover:border-green-neon shadow-green-neon hover:shadow-green-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-crosshairs text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-green-neon transition-colors">2. headlock kezis🔥ipa</h2>
+                    <p class="text-[11px] text-emerald-300/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-green-neon rounded-full shadow-sm group-hover:bg-emerald-400 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 3. delta menu (Yellow Neon) -->
+        <a href="https://link4m.net/I2ih69Yh" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-yellow-400/30 hover:border-yellow-400 shadow-yellow-neon hover:shadow-yellow-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-bolt text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">3. delta menu</h2>
+                    <p class="text-[11px] text-yellow-200/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-yellow-400 rounded-full shadow-sm group-hover:bg-yellow-300 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 4. aim all ffth+ffmax👑 (Yellow Neon) -->
+        <a href="https://link4m.net/I2ih69Yh" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-yellow-400/30 hover:border-yellow-400 shadow-yellow-neon hover:shadow-yellow-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-crosshairs text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">4. aim all ffth+ffmax👑</h2>
+                    <p class="text-[11px] text-yellow-200/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-yellow-400 rounded-full shadow-sm group-hover:bg-yellow-300 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 5. nguồn menu ffth+ffmax 👑 (Yellow Neon) -->
+        <a href="https://link4m.net/6dYxb" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-yellow-400/30 hover:border-yellow-400 shadow-yellow-neon hover:shadow-yellow-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-code text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">5. nguồn menu ffth+ffmax 👑</h2>
+                    <p class="text-[11px] text-yellow-200/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-yellow-400 rounded-full shadow-sm group-hover:bg-yellow-300 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 6. aim cổ vip👑 mk:ALPHA (Yellow Neon) -->
+        <a href="https://link4m.org/nwTVrR" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-yellow-400/30 hover:border-yellow-400 shadow-yellow-neon hover:shadow-yellow-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-bullseye text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">6. aim cổ vip👑 mk:ALPHA</h2>
+                    <p class="text-[11px] text-yellow-200/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-yellow-400 rounded-full shadow-sm group-hover:bg-yellow-300 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 7. menu vip3105 (Yellow Neon) -->
+        <a href="https://link4m.org/zHVAqu1" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-yellow-400/30 hover:border-yellow-400 shadow-yellow-neon hover:shadow-yellow-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-crown text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">7. menu vip3105</h2>
+                    <p class="text-[11px] text-yellow-200/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-yellow-400 rounded-full shadow-sm group-hover:bg-yellow-300 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 8. menu florkff bypass vip👑 (GREEN NEON) -->
+        <a href="https://link4m.org/2Thnx7u" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-green-neon/30 hover:border-green-neon shadow-green-neon hover:shadow-green-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-fire text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-green-neon transition-colors">8. menu florkff bypass vip👑</h2>
+                    <p class="text-[11px] text-emerald-300/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-green-neon rounded-full shadow-sm group-hover:bg-emerald-400 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 9. next dns antiban (GREEN NEON) -->
+        <a href="https://link4m.net/D0yeZNZ" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-green-neon/30 hover:border-green-neon shadow-green-neon hover:shadow-green-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-shield-virus text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-green-neon transition-colors">9. next dns antiban</h2>
+                    <p class="text-[11px] text-emerald-300/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-green-neon rounded-full shadow-sm group-hover:bg-emerald-400 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 10. dsgame (GREEN NEON) -->
+        <a href="https://link4m.org/XTaGmE" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-green-neon/30 hover:border-green-neon shadow-green-neon hover:shadow-green-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-gamepad text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-green-neon transition-colors">10. dsgame</h2>
+                    <p class="text-[11px] text-emerald-300/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-green-neon rounded-full shadow-sm group-hover:bg-emerald-400 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 11. app ipa 3105 (GREEN NEON) -->
+        <a href="https://www.mediafire.com/file/keuqber9kx865i9/3105-2.0-build8-20260914-125906-unsigned.ipa/file" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-green-neon/30 hover:border-green-neon shadow-green-neon hover:shadow-green-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-brands fa-apple text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-green-neon transition-colors">11. app ipa 3105</h2>
+                    <p class="text-[11px] text-emerald-300/70">Tải file IPA MediaFire trực tiếp</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-green-neon rounded-full shadow-sm group-hover:bg-emerald-400 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 12. 3105 cài trực tiếp (Yellow Neon) -->
+        <a href="https://ipas.cc/aviqwh" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-yellow-400/30 hover:border-yellow-400 shadow-yellow-neon hover:shadow-yellow-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-download text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">12. 3105 cài trực tiếp</h2>
+                    <p class="text-[11px] text-yellow-200/70">Cài đặt trực tiếp trên thiết bị</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-yellow-400 rounded-full shadow-sm group-hover:bg-yellow-300 transition-colors">Cài Đặt</span>
+        </a>
+
+        <!-- 13. menu ipa (GREEN NEON) -->
+        <a href="https://link4m.net/9mzixbUX" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-green-neon/30 hover:border-green-neon shadow-green-neon hover:shadow-green-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-file-arrow-down text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-green-neon transition-colors">13. menu ipa</h2>
+                    <p class="text-[11px] text-emerald-300/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-green-neon rounded-full shadow-sm group-hover:bg-emerald-400 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 14. menu rời tipa (Yellow Neon) -->
+        <a href="https://link4m.org/4oxCif2" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-yellow-400/30 hover:border-yellow-400 shadow-yellow-neon hover:shadow-yellow-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-layer-group text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">14. menu rời tipa</h2>
+                    <p class="text-[11px] text-yellow-200/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-yellow-400 rounded-full shadow-sm group-hover:bg-yellow-300 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 15. proxy (Green Neon) -->
+        <a href="https://www.mediafire.com/file/byuk047vzmlzhy5/ip+103.74.103.248.md/file" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-green-neon/30 hover:border-green-neon shadow-green-neon hover:shadow-green-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-network-wired text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-green-neon transition-colors">15. proxy</h2>
+                    <p class="text-[11px] text-emerald-300/70">Tải file Proxy MediaFire trực tiếp</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-green-neon rounded-full shadow-sm group-hover:bg-emerald-400 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 16. mod skin no map3105 (Yellow Neon) -->
+        <a href="https://link4m.net/ffVDfS" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-yellow-400/30 hover:border-yellow-400 shadow-yellow-neon hover:shadow-yellow-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-shirt text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-yellow-300 transition-colors">16. mod skin no map3105</h2>
+                    <p class="text-[11px] text-yellow-200/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-yellow-400 rounded-full shadow-sm group-hover:bg-yellow-300 transition-colors">Tải Ngay</span>
+        </a>
+
+        <!-- 17. bí ẩn🔥 (Green Neon) -->
+        <a href="https://link4m.net/xJG5q2q" target="_blank" rel="noopener noreferrer" 
+           class="group flex items-center justify-between w-full p-4 rounded-2xl bg-[#181508]/90 border border-green-neon/30 hover:border-green-neon shadow-green-neon hover:shadow-green-neon-lg transition-all duration-300 transform active:scale-[0.98]">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-green-600 flex items-center justify-center text-gray-950 font-bold shadow-md group-hover:rotate-6 transition-transform">
+                    <i class="fa-solid fa-fire text-base"></i>
+                </div>
+                <div class="text-left">
+                    <h2 class="text-sm font-bold text-white group-hover:text-green-neon transition-colors">17. bí ẩn🔥</h2>
+                    <p class="text-[11px] text-emerald-300/70">Link tải rút gọn tốc độ cao</p>
+                </div>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold text-gray-950 bg-green-neon rounded-full shadow-sm group-hover:bg-emerald-400 transition-colors">Tải Ngay</span>
+        </a>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 text-center text-xs text-yellow-200/50 border-t border-yellow-400/10 mt-auto relative z-10">
+        <p>© 2026 MC MOD MOBILE. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
